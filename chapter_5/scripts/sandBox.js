@@ -73,3 +73,18 @@ console.log(Math.trunc(area));
 const random = Math.random();
 console.log(random);
 console.log(Math.round(random * 100));
+
+//primative values
+let score0 = 50;
+let score1 = score0;
+console.log(`score0: ${score0}`, `score1: ${score1}`);
+
+score0 = 100;
+console.log(`score0: ${score0}`, `score1: ${score1}`);
+
+const user0 = {name: "ryu", age: 30};
+const user1 = user0;
+console.log(user0, user1);
+
+user0.age = 40;
+console.log(user0, user1);
