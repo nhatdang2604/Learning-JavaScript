@@ -168,3 +168,13 @@ console.log("Shaun".toLowerCase() != name);
 console.log(name > "crystal");
 console.log(name > "Shaun");
 console.log(name > "Crystal");
+
+//Strict comparision (different types cannot be equal)
+console.log(25 == age);
+console.log("25" == age);
+console.log(25 != age);
+console.log("25" != age);
+console.log("25" === age);
+console.log("25" !== age);
+
+
