@@ -19,3 +19,15 @@ const speak0 = function(name = "luigi", time = "night") {
 
 speak0('mario', 'morning');
 speak0();
+
+//returning values
+const calcArea = function(radius) {
+    const pi = 3.14;
+    let area = pi * radius ** 2;
+    return area;
+};
+
+const area = calcArea(5);
+console.log(area);
+
+
