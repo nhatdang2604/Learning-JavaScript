@@ -65,3 +65,17 @@ if (password.length >= 12) {
     console.log("password is not long enough");
 }
 
+//Variables and block scope
+const value = 30;
+if (true) {
+    const value = 40;
+    let text = "shaun";
+    console.log("inside 1st code block: ", value, text);
+
+    if (true) {
+        const value = 50;
+        console.log("inside 2nd code block: ", value);
+    }
+}
+
+//console.log("outside code block: ", value, text);
