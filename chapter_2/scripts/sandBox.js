@@ -138,3 +138,33 @@ console.log(ninjas);
 //let test;
 let test = null;
 console.log(test, test * 3, `the age is ${test}`);
+
+//Boolean stuffs
+console.log(true, false, "true", "false");
+
+//Methods which returning boolean
+email = "gooloogoooloo@gmail.com";
+let names = ["mario", "luigi", "toad"];
+result = email.includes("@");
+console.log(result);
+
+result = names.includes("bowser");
+console.log(result);
+
+//Comparision operator
+age = 25;
+console.log(25 == age);
+console.log(30 == age);
+console.log(30 != age);
+console.log(25 != age);
+console.log(25 < age);
+console.log(30 > age);
+console.log(25 <= age);
+console.log(25 >= age);
+
+let name = "shaun";
+console.log("shaun" == name);
+console.log("Shaun".toLowerCase() != name);
+console.log(name > "crystal");
+console.log(name > "Shaun");
+console.log(name > "Crystal");
