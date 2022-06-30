@@ -89,3 +89,16 @@ const logPerson = (person, index) => {
 }
 
 people.forEach(logPerson);
+
+
+//Get a refernce to the 'ul'
+const ul = document.querySelector(".people");
+
+let html = "";
+people.forEach((person) => {
+    //create html template for each person
+    html += `<li style = "color: purple">${person}</li>`;
+})
+
+console.log(html);
+ul.innerHTML = html;
