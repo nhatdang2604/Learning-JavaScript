@@ -63,6 +63,29 @@ let result0 = greet0();
 console.log(result0);
 
 //methods;
- 
 let result1 = name.toUpperCase();
 console.log(result1);
+
+//callbacks and foreach
+
+const myFunc = (callbackFunc) => {
+
+    //do sth
+    let value = 50;
+    callbackFunc(value);
+
+};
+
+myFunc((value) => {
+    //do sth
+    console.log(value);
+});
+
+let people = ["mario", "luigi", "ryu", "shaun", "chun-li"];
+
+const personToStr = (person, index) => `${index} - Hello ${person}`; 
+const logPerson = (person, index) => {
+    console.log(personToStr(person, index));
+}
+
+people.forEach(logPerson);
