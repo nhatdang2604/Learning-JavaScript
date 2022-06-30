@@ -102,3 +102,35 @@ let html = `
 
 console.log(html);
 
+//Object stuffs
+let ninjas = ["shaun", "ryu", "chun-li"];
+console.log(ninjas);
+ninjas[0] = "terror";
+console.log(ninjas[0]);
+
+let ages = [20, 25, 30 , 35];
+console.log(ages[2]);
+
+let randoms = ["shaun", "crystal", [30, 20]];
+console.log(randoms[2]);
+
+console.log(ninjas.length);
+
+//Array methods
+result = ninjas.join(", ");
+console.log(result);
+
+result = ninjas.indexOf(`chun-li`);
+console.log(result);
+
+result = ninjas.concat(["ken", "akuma"]);
+console.log(result);
+
+result = ninjas.push("gon");
+console.log(result);
+console.log(ninjas);
+
+result = ninjas.pop();
+console.log(result);
+console.log(ninjas);
+
