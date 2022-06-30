@@ -177,4 +177,28 @@ console.log("25" != age);
 console.log("25" === age);
 console.log("25" !== age);
 
+//type conversion
+score = "100";
+console.log(score + 1);
+console.log(1 + score);
+console.log(typeof score);
+
+score = Number(score);
+console.log(score + 1);
+console.log(1 + score);
+console.log(typeof(score));
+
+result = Number("hello");
+console.log(result, typeof(result));
+
+result = String(50);
+console.log(result, typeof(result));
+result = Boolean(100);
+console.log(result, typeof(result));
+result = Boolean(0);
+console.log(result, typeof(result));
+result = Boolean("0");
+console.log(result, typeof(result));
+result = Boolean("");
+console.log(result, typeof(result));
 
