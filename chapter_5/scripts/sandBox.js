@@ -9,6 +9,18 @@ let user = {
         "why mac & cheese rules",
         "10 things to make with marmite",
     ],
+
+    login: () => {
+        console.log("The user logged in");
+    },
+
+    logout: () => {
+        console.log("The user logged out");
+    },
+
+    // logBlogs: () => {
+        
+    // }, 
 };
 
 console.log(user);
@@ -22,3 +34,6 @@ user[`name`] = "chun-li";
 console.log(user);
 
 console.log(typeof(user));
+
+user.login();
+user.logout();
