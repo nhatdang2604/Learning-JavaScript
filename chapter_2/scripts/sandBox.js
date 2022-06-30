@@ -134,3 +134,7 @@ result = ninjas.pop();
 console.log(result);
 console.log(ninjas);
 
+//Undefined and null stuffs
+//let test;
+let test = null;
+console.log(test, test * 3, `the age is ${test}`);
