@@ -30,3 +30,10 @@ while (i < names.length) {
     console.log(names[i]);
     ++i;
 }
+
+//do while loops
+i = 3;
+do {
+    console.log("val of i is: ", i);
+    ++i;
+} while(i < 5);
