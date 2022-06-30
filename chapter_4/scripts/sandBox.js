@@ -30,4 +30,27 @@ const calcArea = function(radius) {
 const area = calcArea(5);
 console.log(area);
 
+//arrow function
+const calcAreaArrow = (radius) => {
+    const pi = 3.14;
+    let area = pi * radius ** 2;
+    return area;
+}
 
+const areaArrow = calcAreaArrow(5);
+console.log(areaArrow);
+
+//practise arrow functions
+const greetArrow = () => "hello, world";
+console.log(greetArrow());
+
+const bill = (products, tax) => {
+    let total = 0;
+    let size = products.length;
+    for (let i = 0; i < size; ++i) {
+        total += products[i] + products[i] * tax;
+    }
+    return total;
+}
+
+console.log(bill([15, 15, 30], 0.2));
