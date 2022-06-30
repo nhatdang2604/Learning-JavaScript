@@ -82,3 +82,23 @@ likes = 10;
 
 result = "the blog has " + likes + " likes";
 console.log(result);
+
+//Concatenation way
+const title = "Best reads of 2022";
+const author = "Mario";
+result = "The blog called " + title + " by " + author + " has " + likes + " likes ";
+console.log(result);
+
+//Template string way
+result = `The blog called ${title} by ${author} has ${likes} likes`;
+console.log(result);
+
+//Creating HTML template
+let html = `
+    <h2>${title}</h2>
+    <p>By ${author}</p>
+    <span>This blog has ${likes} likes</span>
+`;
+
+console.log(html);
+
