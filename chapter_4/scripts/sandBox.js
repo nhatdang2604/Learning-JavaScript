@@ -10,3 +10,12 @@ const speak = function() {
 
 // greet();
 speak();
+
+//arguments and parameters
+
+const speak0 = function(name = "luigi", time = "night") {
+    console.log(`good ${time} ${name}`);
+}
+
+speak0('mario', 'morning');
+speak0();
