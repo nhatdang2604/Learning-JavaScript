@@ -55,3 +55,30 @@ console.log(result);
 result = email.replace("@", "__");
 console.log(result);
 console.log(email);
+
+//Number stuffs
+let radius = 10;
+const pi = 3.14;
+console.log(radius, pi);
+
+console.log(10/2);
+result = radius % 3;
+console.log(result);
+
+result = pi * radius ** 2;
+console.log(result);
+
+let likes = 10;
+likes = likes + 1;
+++likes;
+likes--;
+likes *= 2;
+likes += 10;
+likes -= 5;
+likes /= 2;
+console.log(likes);
+//console.log(5/"hello");
+likes = 10;
+
+result = "the blog has " + likes + " likes";
+console.log(result);
