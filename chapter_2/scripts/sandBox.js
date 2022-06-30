@@ -44,4 +44,14 @@ let index = email.indexOf("@");
 console.log(index);
 
 result = email.lastIndexOf("t");
-console.log(reuslt);
+console.log(result);
+
+result = email.slice(0, email.lastIndexOf("@"));
+console.log(result);
+
+result = email.substr(email.lastIndexOf("@") + 1, 9);
+console.log(result);
+
+result = email.replace("@", "__");
+console.log(result);
+console.log(email);
