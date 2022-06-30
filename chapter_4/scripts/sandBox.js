@@ -54,3 +54,15 @@ const bill = (products, tax) => {
 }
 
 console.log(bill([15, 15, 30], 0.2));
+
+//functions
+const name = "shaun";
+
+const greet0 = () => "hello";
+let result0 = greet0();
+console.log(result0);
+
+//methods;
+ 
+let result1 = name.toUpperCase();
+console.log(result1);
