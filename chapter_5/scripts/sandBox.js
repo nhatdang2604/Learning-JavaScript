@@ -10,17 +10,27 @@ let user = {
         "10 things to make with marmite",
     ],
 
-    login: () => {
+    login() {
         console.log("The user logged in");
     },
 
-    logout: () => {
+    logout() {
         console.log("The user logged out");
     },
 
-    // logBlogs: () => {
-        
-    // }, 
+    logBlogs() {
+        //console.log(this.blogs);
+        console.log("This user has written the following blogs: ");
+        this.blogs.forEach(blog => {
+            console.log(blog);
+        });
+
+        // const test = () => {
+        //     console.log(this);
+        // }
+
+        // test();
+    }, 
 };
 
 console.log(user);
@@ -35,5 +45,8 @@ console.log(user);
 
 console.log(typeof(user));
 
+//console.log(this);
+
 user.login();
 user.logout();
+user.logBlogs();
