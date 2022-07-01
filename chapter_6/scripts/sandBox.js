@@ -44,3 +44,13 @@ const people = ["mario", "luigi", "yoshi"];
 people.forEach(person => {
     content.innerHTML += `<p>${person}</p>`;
 });
+
+const link = document.querySelector("a");
+console.log(link.getAttribute("href"));
+link.setAttribute("href", "https://facebook.com");
+link.innerText = "Facebook";
+
+const msg = document.querySelector("p.error");
+console.log(msg.getAttribute("class"));
+msg.setAttribute("class", "success");
+msg.setAttribute("style", "color: green;");
