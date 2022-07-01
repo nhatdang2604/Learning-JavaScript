@@ -86,3 +86,6 @@ ps.forEach(p => {
         p.classList.add(SUCCESS);
     }
 });
+
+const titl = document.querySelector(".title");
+title.classList.toggle("test");
