@@ -63,3 +63,26 @@ title.style.margin = "50px";
 title.style.color = "crimson";
 title.style.fontSize = "60px";
 title.style.margin = "";
+
+const p = document.getElementById("msg");
+console.log(p.classList);
+p.classList.add("error");
+console.log(p.classList);
+p.classList.add("success");
+console.log(p.classList);
+
+
+const ps = document.querySelectorAll("body > p");
+
+console.log(ps.length);
+ps.forEach(p => {
+    let text = p.innerText;
+    const ERROR = "error";
+    const SUCCESS = "success";
+
+    if (text.includes(ERROR)) {
+        p.classList.add(ERROR);
+    } else if (text.includes(SUCCESS)) {
+        p.classList.add(SUCCESS);
+    }
+});
