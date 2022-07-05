@@ -11,3 +11,21 @@ function foo0(a, b) {
 const foo1 = function(a, b) {
     //do something
 }
+
+//Named function expression
+const foo3 = function foo_3(a, b) {
+    //do something
+}
+
+//call
+const students = [
+    {name: `test0`},
+    {name: `test1`},
+    {name: `test2`},
+]
+
+for (const student of students) {
+    (function(){
+        console.log(this.name);
+    }).call(student);
+} 
