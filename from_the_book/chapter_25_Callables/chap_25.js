@@ -58,3 +58,4 @@ const arrowAdder = (a, b) => {
 }
 const arrowBinder = arrowAdder.bind(binderOwner);
 console.log(arrowBinder(3,2));
+
