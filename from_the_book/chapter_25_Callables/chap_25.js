@@ -29,3 +29,14 @@ for (const student of students) {
         console.log(this.name);
     }).call(student);
 } 
+
+//apply
+const applier = function(...students) {
+    console.log(this.name);
+    for (const student of students) {
+        console.log(student);
+    }
+};
+
+const applierOwner = {name: "applier tester"};
+applier.apply(applierOwner, students);
