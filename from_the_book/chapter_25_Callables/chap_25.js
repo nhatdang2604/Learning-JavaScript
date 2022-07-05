@@ -40,3 +40,21 @@ const applier = function(...students) {
 
 const applierOwner = {name: "applier tester"};
 applier.apply(applierOwner, students);
+
+//bind
+const adder = function(a, b) {
+    console.log(this.name);
+    return a + b;
+}
+
+const binderOwner = {name: "binder testing"}
+const binder = adder.bind(binderOwner);
+console.log(binder(1,2));
+
+//Arrow function cannot apply binder `this` keyword
+const arrowAdder = (a, b) => {
+    console.log(this.name);
+    return a + b;
+}
+const arrowBinder = arrowAdder.bind(binderOwner);
+console.log(arrowBinder(3,2));
