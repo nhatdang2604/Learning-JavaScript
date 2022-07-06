@@ -39,3 +39,13 @@ class Container {
 
 const cont = new Container(12);
 console.log(cont.value);
+
+//Try to access private attribute of superclass from subclass
+// class SuperClass {
+//     #_superProp = "superProp";
+// }
+
+// class SubClass extends SuperClass {
+//     superProp() {return this.#_superProp;}
+// }
+
