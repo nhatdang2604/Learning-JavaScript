@@ -49,3 +49,20 @@ console.log(cont.value);
 //     superProp() {return this.#_superProp;}
 // }
 
+//Using class before ECMASScript 6
+// function StringBuilderConstructor(starterString) {
+//     this.string = starterString;
+// }
+
+const StringBuilderConstructor = function(starter) {
+    this.string = starter;
+}
+
+StringBuilderConstructor.prototype.add = function(string) {
+    this.string += string;
+    return this;
+};
+
+const builder = new StringBuilderConstructor("");
+builder.add("Hello").add(" ").add("World");
+console.log(builder.string);
