@@ -21,3 +21,34 @@ const iter0 = generator();
 for (const i of iter0) {
     console.log(i);
 }
+
+const genLines = function*() {
+    yield "first line";
+    yield "second line";
+    yield "last line";
+};
+
+const numberLines = function*(lineIterable) {
+    let index = 0;
+    for (const line of lineIterable) {
+        ++index;
+        yield index + ": " + line;
+    }
+};
+
+let iter = numberLines(genLines());
+for (const line of iter) {
+    console.log(line);
+}
+
+const mapIter = function* (iterables, functor) {
+    for (const iterable of iterables) {
+        yield functor(iterable);
+    }
+}
+
+const iter1 = mapIter([1,2,3], x => 2*x);
+console.log(iter1.next());
+console.log(iter1.next());
+console.log(iter1.next());
+console.log(iter1.next());
