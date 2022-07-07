@@ -88,3 +88,4 @@ const tree = new BinaryTree(0,
 for (const node of tree) {
     console.log(node);
 }
+
