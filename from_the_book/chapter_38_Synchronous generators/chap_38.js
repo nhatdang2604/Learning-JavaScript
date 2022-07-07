@@ -52,3 +52,39 @@ console.log(iter1.next());
 console.log(iter1.next());
 console.log(iter1.next());
 console.log(iter1.next());
+
+//Using yields * for binary tree
+class BinaryTree {
+
+    #_value;
+    #_left;
+    #_right;
+
+    constructor(value, left = null, right = null) {
+        this.#_value = value;
+        this.#_left = left;
+        this.#_right = right;
+    }
+
+    get value(){return this.#_value;}
+    get left(){return this.#_left;}
+    get right(){return this.#_right;}
+
+    *[Symbol.iterator](){
+        yield this.value();
+        if (this.left()) {yield* this.left();}
+        if (this.right()) {yield* this.right();}
+    }
+}
+
+const tree = new BinaryTree(0, 
+    new BinaryTree(1, 
+        new BinaryTree(3),
+        new BinaryTree(4)), 
+    new BinaryTree(2, 
+        new BinaryTree(5),
+        new BinaryTree(6)));
+
+for (const node of tree) {
+    console.log(node);
+}
