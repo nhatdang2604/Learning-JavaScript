@@ -7,10 +7,17 @@ const generator = function* () {
     loc = 3; yield {x: 2, y: 2};
 };
 
-const iter = generator();
-let value = iter.next();
-while (!value.done) {
-    console.log(value);
-    value = iter.next();
-    value = iter;
+//Basic way
+// const iter = generator();
+// let value = iter.next();
+// while (!value.done) {
+//     console.log(value);
+//     value = iter.next();
+//     value = iter;
+// }
+
+//For of way
+const iter0 = generator();
+for (const i of iter0) {
+    console.log(i);
 }
