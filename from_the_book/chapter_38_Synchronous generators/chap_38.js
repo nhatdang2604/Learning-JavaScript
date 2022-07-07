@@ -71,9 +71,9 @@ class BinaryTree {
     get right(){return this.#_right;}
 
     *[Symbol.iterator](){
-        yield this.value();
-        if (this.left()) {yield* this.left();}
-        if (this.right()) {yield* this.right();}
+        yield this.value;
+        if (this.left) {yield* this.left;}
+        if (this.right) {yield* this.right;}
     }
 }
 
