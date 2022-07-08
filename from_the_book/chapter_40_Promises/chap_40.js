@@ -25,3 +25,16 @@ Promise.all(promises)
     .then(result => {
         console.log(result);
     });
+
+const resultTime = 200;
+const errorTime = 100;
+const promises0 = [
+    new Promise((resolve, reject) => setTimeout(() => resolve("result"), resultTime)),
+    new Promise((resolve, reject) => setTimeout(() => reject("error"), errorTime)),
+];
+
+Promise.race(promises0)
+    .then(
+        (result) => console.log(result),
+        (error) => console.log(error)
+    );
