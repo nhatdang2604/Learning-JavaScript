@@ -68,3 +68,16 @@ Promise.any(promises2)
     .catch((error) => {
         console.log(error.errors);
     });
+
+//Using of Promise.allSettled()
+const promise3 = [
+    Promise.reject( "allSettled: reject 0"),
+    Promise.resolve("allSettled: resolve 1"),
+]
+
+Promise.allSettled(promise3)
+    .then((results) => {
+        for (const result of results) {
+            console.log(result);
+        }
+    })
