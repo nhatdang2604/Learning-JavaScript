@@ -19,6 +19,7 @@ function timesTwoAsync(x) {
     return new Promise(resolve => resolve(2*x));
 }
 
+//Using of Promise.all()
 const arr = [1, 2, 3];
 const promises = arr.map(timesTwoAsync);
 Promise.all(promises)
@@ -26,6 +27,7 @@ Promise.all(promises)
         console.log(result);
     });
 
+//Using of Promise.race()
 const resultTime = 200;
 const errorTime = 100;
 const promises0 = [
@@ -38,3 +40,16 @@ Promise.race(promises0)
         (result) => console.log(result),
         (error) => console.log(error)
     );
+
+
+//Using of Promise.any()
+const promises1 = [
+    Promise.reject("error 0"),
+    Promise.reject("error 1"),
+    Promise.resolve("result"),
+];
+
+Promise.any(promises1)
+    .then((result) => {
+        console.log(result)
+    });
