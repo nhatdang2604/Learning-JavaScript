@@ -42,7 +42,7 @@ Promise.race(promises0)
     );
 
 
-//Using of Promise.any()
+//Using of Promise.any(): accept case
 const promises1 = [
     Promise.reject("error 0"),
     Promise.reject("error 1"),
@@ -52,4 +52,19 @@ const promises1 = [
 Promise.any(promises1)
     .then((result) => {
         console.log(result)
+    });
+
+//Using of Promise.any(): error case
+const promises2 = [
+    Promise.reject("error 0"),
+    Promise.reject("error 1"),
+    Promise.reject("error 2"),
+];
+
+Promise.any(promises2)
+    .then((result) => {
+        console.log(result);
+    })
+    .catch((error) => {
+        console.log(error.errors);
     });
