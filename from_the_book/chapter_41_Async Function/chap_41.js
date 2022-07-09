@@ -15,3 +15,19 @@ asyncFunction()
 
 console.log("Task end");
 
+//Using await
+const textFunction = function() {
+    console.log("Hello");
+    return "Hello World";
+}
+
+const asyncFunction0 = async function() {
+    console.log("before await");
+    let result = await textFunction();
+    console.log("after await");
+    console.log("Result 1st turn ", result);
+    return result;
+}
+
+console.log(asyncFunction0());
+
