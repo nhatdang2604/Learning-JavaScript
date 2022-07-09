@@ -81,3 +81,5 @@ Promise.allSettled(promise3)
             console.log(result);
         }
     })
+
+    
